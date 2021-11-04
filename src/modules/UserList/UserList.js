@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../modules/UI/UIStyles.css";
+import "../UI/UIStyles.css";
 import styles from "./UserList.module.css";
 
 const UserList = () => {

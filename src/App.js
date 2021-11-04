@@ -1,7 +1,7 @@
 import React from "react";
 
-import NewUserForm from "./modules/NewUserForm";
-import UserList from "./modules/UserList";
+import NewUserForm from "./modules/NewUser/NewUserForm";
+import UserList from "./modules/UserList/UserList";
 
 function App() {
   return (
