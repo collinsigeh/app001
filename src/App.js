@@ -4,10 +4,7 @@ import NewUserForm from "./modules/NewUser/NewUserForm";
 import UserList from "./modules/UserList/UserList";
 
 function App() {
-  const [users, setUsers] = useState([
-    { username: "Mac", age: 31 },
-    { username: "Collins", age: 34 },
-  ]);
+  const [users, setUsers] = useState('');
 
   const addUserHandler = (newUser) => {
     setUsers((prevUsers) => {
@@ -17,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <NewUserForm onAddUser={addUserHandler} />
+      <NewUserForm onNewUser={addUserHandler} />
       {users.length > 0 && <UserList users={users} />}
     </div>
   );
