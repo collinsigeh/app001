@@ -9,6 +9,15 @@ const NewUserForm = (props) => {
 
   const newUserHandler = (event) => {
     event.preventDefault();
+
+    if(username.length < 2){
+      props.setInputError('Invalid username entered!')
+      return;
+    }
+    if(Number.isNaN(age) || age < 0){
+      props.setInputError('Invalid age entered!');
+      return;
+    }
     const newUser = {
       id: Math.random(),
       username: username,
@@ -24,7 +33,7 @@ const NewUserForm = (props) => {
   };
 
   const ageHandler = (event) => {
-    setAge(event.target.value);
+    setAge(event.target.value.trim());
   };
 
   return (
